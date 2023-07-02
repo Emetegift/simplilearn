@@ -104,7 +104,7 @@ Polymorphism: In this mechanism, a single feature can be used in multiple ways
 
 class Car:
     def __init__(self, name):
-        self.name =name
+        self.name = name
 
 class Sedan(Car):
     def accelerate(self):
