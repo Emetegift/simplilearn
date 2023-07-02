@@ -27,14 +27,42 @@
 #     i+=1
 # print(sum)
 
-## To reverse an integer by taking input from the users
-n= int(input("Eneter a number "))
-nr = 0 ##where nr is a reversal of n
+# ## To reverse an integer by taking input from the users
+# n= int(input("Eneter a number "))
+# nr = 0 ## where nr is a reversal of n
+# while n%10!=0:
+#     c=n%10
+#     nr=nr*10 + c
+#     n=n//10
+# print(nr)   
+
+## A simple guessing game using a while loop
+import random
+
+nump = random.randint(1000, 9999)
+n = int(input("Enter a number"))
 while n%10!=0:
-    c=n%10
-    nr=nr*10 + c
-    n=n//10
-print(nr)   
+    num = nump
+    cor =0
+    while num%10!=0:
+        numc = num%10
+        nc = n%10
+        num = num//10
+        n = n//10
+        if numc==nc:
+            cor+=1
+    if cor==4:
+        print("Congrats! you guesses it right")
+        break
+    else:
+        print("%d digits were guessed correctly" %cor)
+        ## To give the user another chance to try and guess again
+        n =int(input("Enter a number"))
+else:
+    print("You quit the game ")
+        
+        
+
 
 
 
